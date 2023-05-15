@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Length Conversion</title>
+    <script>
+        function convertLength() {
+            // Get the input value in millimeters
+            var millimeters = parseFloat(document.getElementById("millimeters").value);
+
+            // Calculate the conversions
+            var centimeters = millimeters / 10;
+            var meters = millimeters / 1000;
+            var kilometers = millimeters / 1000000;
+
+            // Output the results
+            document.getElementById("centimeters").value = centimeters;
+            document.getElementById("meters").value = meters;
+            document.getElementById("kilometers").value = kilometers;
+        }
+    </script>
+</head>
+<body>
+    <h1>Length Conversion</h1>
+    <label for="millimeters">Millimeters:</label>
+    <input type="number" id="millimeters" step="0.01" min="0" onchange="convertLength()">
+    <button>
+        <option>Calculate</option>
+    </button>
+    <input type="text" id="id1"><br>
+    <input type="text" id="id2"><br>
+    <input type="submit" value="Compute" onclick="myFunction()"><br>
+    
+
+    <label for="centimeters">Centimeters:</label>
+    <input type="number" id="centimeters" step="0.01" >
+    <button>
+        <option>Calculate</option>
+    </button>
+
+    <label for="meters">Meters:</label>
+    <input type="number" id="meters" step="0.01" >
+
+    <label for="kilometers">Kilometers:</label>
+    <input type="number" id="kilometers" step="0.000001" >
+
+</body>
+</html>
